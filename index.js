@@ -27,7 +27,6 @@ UI.prototype.addFoodToList = function(food) {
         <td>${food.price}</td>
         <td style="text-align:center;"><a href="#" class="delete">Hapus</a></td>
     `;
-
     list.appendChild(row);
 }
 
@@ -35,6 +34,7 @@ UI.prototype.addFoodToList = function(food) {
 UI.prototype.deleteFood = function(target) {
     if(target.className === 'delete'){
         target.parentElement.parentElement.remove();
+        document.getElementById('val').innerHTML = "Total Harga :";
     }
 }
 
@@ -79,7 +79,11 @@ document.getElementById('food-form').addEventListener('submit', function(e) {
     //Validasi form
     if(title === '' || price === ''){
         //Error
-        ui.showAlert('😟 Eiits! Form tidak boleh kosong!', 'error');
+        ui.showAlert('😩 Eiits! Form tidak boleh kosong ya!', 'error');
+    }
+
+    else if(price == 0){
+        ui.showAlert('😵 Aduh, Harganya gaboleh 0 ya!', 'error');
     }
 
     else{
@@ -93,6 +97,29 @@ document.getElementById('food-form').addEventListener('submit', function(e) {
     }
 
     e.preventDefault();
+});
+
+
+// yang bisa diclick liat target terlebih dahulu karena di id food-result ada btn
+document.getElementById('food-result').addEventListener('click', function(e){
+    const ui = new UI();
+    var table = document.getElementById('table'), sumVal = 0;
+    // ini diakhir click button save
+    for(var i = 1; i < table.rows.length; i++)
+    {
+        sumVal = sumVal + parseInt(table.rows[i].cells[1].innerHTML);
+    }
+
+    if(sumVal == 0){
+        ui.showAlert('😒 Kamu masukin nilai kosong, coba lagi yuk!', 'error');
+    }
+
+    else{
+        document.getElementById('val').innerHTML = "Total Harganya :" + " Rp. " + sumVal;
+    }
+
+    e.preventDefault();
+        
 });
 
 document.getElementById('food-list').addEventListener('click', function(e){

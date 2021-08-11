@@ -40,6 +40,12 @@ button.btn-new {
     color: #ffff;
 }
 
+button.btn-sv{
+    background-color: #F8485E;
+    border-radius: 0.9em;
+    border: 1px solid #ffff;
+    color: #ffff;  
+}
 input.input-new{
     border-radius: 0.9em;
     font-family: 'Lato', sans-serif;
@@ -51,9 +57,6 @@ label{
 
 form{
     color: #262A53;
-}
-
-table td{
     font-family: 'Lato', sans-serif;
     font-weight: bold;
 }
@@ -150,6 +153,7 @@ table td{
 .vector img{
     position: relative;
     overflow: hidden;
+    margin-top: -100px;
     width: 35%;
     height: 25%;
     z-index: -1;
@@ -158,6 +162,26 @@ table td{
 @media(max-width:1024px) {
     .vector img{
         display: none;
+    }
+}
+
+@media(max-width:411px) {
+    h1{
+        font-size: 3.5rem;
+    }
+}
+@media(max-width:375px) {
+    h1{
+        font-size: 3.4rem;
+    }
+}
+
+@media(max-width:320px){
+    h1{
+        font-size: 3rem;
+    }
+    p a{
+        font-size: 1.6rem !important;
     }
 }
 
