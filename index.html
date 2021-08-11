@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' >
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="source/icon/favicon.ico">
+    <title>Food List: Simple page for your favourite food lists</title>
+
+</head>
+<body>
+    <div class="container">
+        <!-- Author Name -->
+        <div class="author">
+            <p>😎 Created by : <a href="https://github.com/ioofy/" target="_blank" style="text-decoration: none; color: red; font-size: 1.8rem;">Засвиэль</a></p>
+        </div>
+        <!-- Dark / Light Mode element --> 
+        <div>
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+                <i class='bx bxs-moon'></i>
+                <i class='bx bxs-sun'></i>
+                <div class="ball"></div>
+            </label>
+        </div>        
+        <!-- Text and Form -->
+        <h1>📒 Food List v.1.0</h1>
+        <form id="food-form" class="form">
+                <div>
+                    <label for="title">Nama Makanan</label>
+                    <input type="text" id="title" class="input-new u-full-width" placeholder="Nama makanannya apa?">
+                </div>
+                <div>
+                    <label for="price">Harga Makanan</label>
+                    <input type="text" id="price" class="input-new u-full-width" placeholder="Harga makanannya berapa?">
+                </div>
+                <div>
+                    <button class="btn-new u-full-width">Submit</button>
+                </div>
+            <!--Result from Form -->
+            <h1>Food List hari ini</h1>
+            <table class="u-full-width">
+                <thead>
+                    <tr>
+                        <th>Nama Makanan</th>
+                        <th>Harga Makanan</th>
+                        <th style="text-align: center;">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="food-list"></tbody>
+            </table>
+        </form>
+    </div>
+    <!-- Vector Image -->
+    <div class="vector">
+        <img src="source/image/reading-side.png" alt="">
+    </div>
+</body>
+
+<script src="index.js"></script>
+
+</html>

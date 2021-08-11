@@ -1,0 +1,155 @@
+@import url('//db.onlinewebfonts.com/c/06594b8e23c284f33b51e05d8145f62d?family=Coolvetica');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #FDF6F0;
+    transition: all ease-in-out 0.9s;
+}
+
+body.dark-theme{
+	background-color: #1D1D1D;
+}
+
+body.dark-theme h1, 
+body.dark-theme p, 
+body.dark-theme tr, 
+body.dark-theme td, 
+body.dark-theme form{
+    color: pink;
+}
+
+button.btn-new {
+    background-color: #368B85;
+    border-radius: 0.9em;
+    border: 1px solid #ffff;
+    color: #ffff;
+}
+
+input.input-new{
+    border-radius: 0.9em;
+    font-family: 'Lato', sans-serif;
+}
+
+label{
+    letter-spacing: 1px;
+}
+
+form{
+    color: #262A53;
+}
+
+table td{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+.container{
+    top: 5rem;
+    position: relative;
+}
+.container h1{
+    color: #262A53;
+    font-family: 'Coolvetica';
+    padding-top: 1px;
+}
+.form h1{
+    margin-top: 30px;
+}
+
+.success, .error{
+    color: White;
+    font-weight: bold;
+    padding: 5px;
+    margin: 5px 0 15px 0;
+}
+
+.success{
+    background-color: green;
+}
+.error{
+    background-color: red;
+}
+
+.delete{
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: red;
+}
+    
+.author{
+    margin-top: -30px;
+    font-weight: bold; 
+    color: #262A53;
+}
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.bxs-sun{
+    color: #FFB740;
+    font-size: 2rem;
+}
+
+.bxs-moon{
+    color: #111;
+    font-size: 2rem;
+}
+
+.label{
+    float: right;
+    margin-top: -54px;
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+	display: flex;
+	align-items: center;
+    justify-content: space-between;
+	padding: 6px;
+	position: relative;
+	height: 30px;
+	width: 60px;
+}
+
+.ball {
+	background-color: #39A2DB;
+	border-radius: 50%;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.3s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(30px);
+}
+
+.checkbox:checked + .label{
+    background-color: #EEEEEE;
+}
+.vector img{
+    position: relative;
+    overflow: hidden;
+    width: 35%;
+    height: 25%;
+    z-index: -1;
+}
+
+@media(max-width:1024px) {
+    .vector img{
+        display: none;
+    }
+}
+
+
