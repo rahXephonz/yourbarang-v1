@@ -14,6 +14,7 @@
 
 </head>
 <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div class="container">
         <!-- Author Name -->
         <div class="author">
@@ -30,7 +31,7 @@
         </div>        
         <!-- Text and Form -->
         <h1>📒 Your Barang <span style="letter-spacing: 2px;">v.1.0</span></h1>
-        <form id="food-form" name="food-form" class="form">
+        <form id="item-form" name="list-form" class="form">
                 <div>
                     <label for="title">Nama Barang :</label>
                     <input type="text" id="title" class="input-new u-full-width" placeholder="Nama barangnya apa?">
@@ -43,7 +44,7 @@
                     <button id="submit" class="btn-new u-full-width">Submit</button>
                 </div>
 
-            <blockquote><p><i>*Terima kasih sudah berkunjung. Semoga bermanfaat! :)</i></p></blockquote>
+            <blockquote><p><i>*Terima kasih sudah berkunjung. Semoga bermanfaat! ya :)</i></p></blockquote>
             <!--Result from Form -->
             <h1>📌 List Barang hari ini</h1>
             <table id="table" class="u-full-width">
@@ -54,16 +55,16 @@
                         <th style="text-align: center;">Aksi</th>
                     </tr>
                 </thead>
-                <tbody id="food-list">
+                <tbody id="item-list">
                     <!--Result dari form menampilkan td-->
                 </tbody>
             </table>
             <span id="val">Total Harga :</span>
             <hr>
         </form>
-        <form id="food-result">
+        <form id="item-result">
             <div>
-                <button type="save" class="btn-sv">Jumlahin dan Simpan</button>
+                <a><button type="save" class="btn-sv">Jumlahin dan Simpan</button></a>
             </div>
         </form>
     </div>
@@ -84,9 +85,11 @@
 
 </body>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
 crossorigin="anonymous"></script>
-<script src="index.js"></script>
+<script src="indexes6.js"></script>
 
 
 </html>

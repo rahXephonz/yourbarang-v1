@@ -18,7 +18,7 @@
 }
 body{
     background-color: #FDF6F0;
-    transition: all ease-in-out 0.9s;
+    transition: all ease-in-out 1.1s;
 }
 
 body.dark-theme{
@@ -184,6 +184,9 @@ form{
     }
     .footer{
         font-size: 1.6rem !important;
+    }
+    blockquote{
+        font-size: 1.5rem;
     }
 }
 @media(max-width:375px) {

@@ -1,5 +1,4 @@
 // Method dark mode dengan toggle
-
 const chk = document.getElementById('chk');
 chk.addEventListener('change', () => {
 	document.body.classList.toggle('dark-theme');
@@ -86,8 +85,12 @@ document.getElementById('food-form').addEventListener('submit', function(e) {
         ui.showAlert('😵 Aduh, Harganya gaboleh 0 ya!', 'error');
     }
 
-    else if(!(/^[0-9_-]{3,16}$/.test(price) || price.length == 0)){
+    else if(!(/^[0-9_-]{1,16}$/.test(price))){
         ui.showAlert('⛔️ Harap isi form harga dengan pure angka ya!', 'error');
+    }
+
+    else if(price.length == 1 || price.length == 2){
+        ui.showAlert('🙄 Hmm harganya harus minimal ratusan yaa!', 'error');
     }
 
     else{
