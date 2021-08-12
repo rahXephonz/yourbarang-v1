@@ -108,7 +108,7 @@ document.getElementById('food-form').addEventListener('submit', function(e) {
         //Tambahkan makanan dan harga ke list
         ui.addFoodToList(food);
         //Succes
-        ui.showAlert('👍 Sip! Data telah ditambahkan', 'success');
+        ui.showAlert('👍 Mantapp! Data telah ditambahkan', 'success');
         //Menghilangkan fields;
         ui.clearFields();
     }
@@ -145,7 +145,7 @@ document.getElementById('food-list').addEventListener('click', function(e){
     //Hapus List makanan
     ui.deleteFood(e.target);
     //Tampilkan show succes allert
-    ui.showAlert('👌 OK! Item yang dipilih telah dihapus!', 'success');
+    ui.showAlert('👌 OK Sip! Item yang dipilih telah dihapus!', 'success');
     //Menghindari tindakan dari aksi yang ada pada element
     e.preventDefault();
 })

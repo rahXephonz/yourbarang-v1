@@ -159,23 +159,36 @@ form{
     z-index: -1;
 }
 
-@media(max-width:1024px) {
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    .footer{
+        top: 100px;
+    }
     .vector img{
-        display: none;
+        position: relative;
+        width: 50%;
+        height: 55%;
+        margin-top: -10px;
     }
 }
 
-@media(max-width:411px) {
+@media(max-width:540px) {
+    .vector{
+        display: none;
+    }
     h1{
         font-size: 3.5rem;
+    }
+    .footer{
+        font-size: 1.6rem !important;
     }
 }
 @media(max-width:375px) {
     h1{
         font-size: 3.4rem;
-    }
-    p i{
-        font-size: 1.5rem;
     }
 }
 
@@ -188,15 +201,23 @@ form{
     }
 }
 
+@media(max-width:280px){
+    .author p, .author a{
+        font-size: 1.2rem !important;
+    }
+}
+
 .footer{
     position: relative;
     font-weight: bold;
-    margin-top: 20px;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.8rem;
 }
 
 .footer i{
-    font-size: 1.8rem;
-    vertical-align: -3px;
+    font-size: 2.2rem;
+    vertical-align: -4px;
 }
 
 .footer a{
