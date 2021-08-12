@@ -5,38 +5,6 @@ chk.addEventListener('change', () => {
 	document.body.classList.toggle('dark-theme');
 });
 
-function numbersonly(myfield, e)
-        {
-            var key;
-            var keychar;
-
-            if (window.event)
-                key = window.event.keyCode;
-            else if (e)
-                key = e.which;
-            else
-                return true;
-
-            keychar = String.fromCharCode(key);
-
-            // control keys
-            if ((key==null) || (key==0) || (key==8) || (key==9) || (key==13) || (key==27) )
-                return true;
-
-            // numbers
-            else if ((("0123456789").indexOf(keychar) > -1))
-                return true;
-
-            // only one decimal point
-            else if ((keychar == "."))
-            {
-                if (myfield.value.indexOf(keychar) > -1)
-                    return false;
-            }
-            else
-                return false;
-}
-
 // Food Constructor
 function Food(title, price){
     this.title = title;
@@ -98,6 +66,7 @@ UI.prototype.clearFields = function() {
     document.getElementById('price').value = '';
 }
 
+
 // Event Listeners
 document.getElementById('food-form').addEventListener('submit', function(e) {
     // Mendapatkan nilai dari form
@@ -115,6 +84,10 @@ document.getElementById('food-form').addEventListener('submit', function(e) {
     }
     else if(price == 0){
         ui.showAlert('😵 Aduh, Harganya gaboleh 0 ya!', 'error');
+    }
+
+    else if(!(/^[0-9_-]{3,16}$/.test(price) || price.length == 0)){
+        ui.showAlert('⛔️ Harap isi form harga dengan pure angka ya!', 'error');
     }
 
     else{
