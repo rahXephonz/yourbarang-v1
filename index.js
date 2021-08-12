@@ -5,23 +5,37 @@ chk.addEventListener('change', () => {
 	document.body.classList.toggle('dark-theme');
 });
 
-function validate(evt) {
-    var theEvent = evt || window.event;
-  
-    // Handle paste
-    if (theEvent.type === 'paste') {
-        key = event.clipboardData.getData('text/plain');
-    } else {
-    // Handle key press
-        var key = theEvent.keyCode || theEvent.which;
-        key = String.fromCharCode(key);
-    }
-    var regex = /[0-9]/;
-    if( !regex.test(key) ) {
-      theEvent.returnValue = false;
-      if(theEvent.preventDefault) theEvent.preventDefault();
-    }
-  }
+function numbersonly(myfield, e)
+        {
+            var key;
+            var keychar;
+
+            if (window.event)
+                key = window.event.keyCode;
+            else if (e)
+                key = e.which;
+            else
+                return true;
+
+            keychar = String.fromCharCode(key);
+
+            // control keys
+            if ((key==null) || (key==0) || (key==8) || (key==9) || (key==13) || (key==27) )
+                return true;
+
+            // numbers
+            else if ((("0123456789").indexOf(keychar) > -1))
+                return true;
+
+            // only one decimal point
+            else if ((keychar == "."))
+            {
+                if (myfield.value.indexOf(keychar) > -1)
+                    return false;
+            }
+            else
+                return false;
+}
 
 // Food Constructor
 function Food(title, price){
@@ -94,7 +108,7 @@ document.getElementById('food-form').addEventListener('submit', function(e) {
     const food = new Food(title, price);
     //Inisiasi UI
     const ui = new UI();
-    //Validasi form
+    
     if(title === '' || price === ''){
         //Error
         ui.showAlert('😩 Eiits! Form tidak boleh kosong ya!', 'error');

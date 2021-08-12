@@ -32,12 +32,12 @@
         <h1>📒 Your Barang <span style="letter-spacing: 2px;">v.1.0</span></h1>
         <form id="food-form" class="form">
                 <div>
-                    <label for="title">Nama Barang</label>
+                    <label for="title">Nama Barang :</label>
                     <input type="text" id="title" class="input-new u-full-width" placeholder="Nama barangnya apa?">
                 </div>
                 <div>
-                    <label for="price">Harga Barang</label>
-                    <input type="text" id="price" class="input-new u-full-width" placeholder="Harga barangnya berapa?" onkeypress='validate(event)'>
+                    <label for="price">Harga Barang :</label>
+                    <input type="text" id="price" class="input-new u-full-width" placeholder="Harga barangnya berapa?" onkeypress="return numbersonly(this, event)">
                 </div>
                 <div>
                     <button id="submit" class="btn-new u-full-width">Submit</button>
